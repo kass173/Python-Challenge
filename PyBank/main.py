@@ -81,8 +81,8 @@ print("Financial Analysis")
 print("___________________________________")
 
 print("Total Months: " + str(monthCount))
-print("Average Change is: $" + str(round(averageChange, 2)))
 print("Total: $" + str(totalVolume))
+print("Average Change is: $" + str(round(averageChange, 2)))
 print("Greatest Increase in Profits: " + str(bestMonth) + "  ($" + str(greatestIncrease) + ")")
 print("Greatest Decrease in Profits: " + str(worstMonth) + "  ($" + str(greatestDecrease) + ")")
 
@@ -92,8 +92,8 @@ f.write("Financial Analysis")
 f.write("___________________________________")
 
 f.write("Total Months: " + str(monthCount))
-f.write("Average Change is: $" + str(round(averageChange, 2)))
 f.write("Total: $" + str(totalVolume))
+f.write("Average Change is: $" + str(round(averageChange, 2)))
 f.write("Greatest Increase in Profits: " + str(bestMonth) + "  ($" + str(greatestIncrease) + ")")
 f.write("Greatest Decrease in Profits: " + str(worstMonth) + "  ($" + str(greatestDecrease) + ")")
 
