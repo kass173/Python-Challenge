@@ -41,7 +41,7 @@ import os
 import csv
 
 # here's my election data - it's in a folder called resources in that lives at the same level as main.py
-election_data_csv = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'resources', 'election_data.csv')
+election_data_csv = /Users/miriam/git/Python-Challenge/PyPoll/Resources(__file__)), 'resources', 'election_data.csv')
 
 totalVotes = 0 # total rows (not including the header is the total of votes)
 
