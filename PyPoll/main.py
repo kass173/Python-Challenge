@@ -1,47 +1,40 @@
-In this challenge, you are tasked with helping a small, rural town modernize its vote counting process.
-You will be given a set of poll data called election_data.csv. The dataset is composed of three columns: "Voter ID", "County", and "Candidate". Your task is to create a Python script that analyzes the votes and calculates each of the following:
+# In this challenge, you are tasked with helping a small, rural town modernize its vote counting process.
+# You will be given a set of poll data called election_data.csv. The dataset is composed of three columns: "Voter ID", "County", and "Candidate". Your task is to create a Python script that analyzes the votes and calculates each of the following:
 
+# The total number of votes cast
 
-The total number of votes cast
+# A complete list of candidates who received votes
 
+# The percentage of votes each candidate won
 
-A complete list of candidates who received votes
+# The total number of votes each candidate won
 
+# The winner of the election based on popular vote.
 
-The percentage of votes each candidate won
+# Your analysis should look similar to the following:
 
+# Election Results
+# -------------------------
+# Total Votes: 369711
+# -------------------------
+# Charles Casper Stockham: 23.049% (85213)
+# Diana DeGette: 73.812% (272892)
+# Raymon Anthony Doane: 3.139% (11606)
+# -------------------------
+# Winner: Diana DeGette
+# -------------------------
 
-The total number of votes each candidate won
+# In addition, your final script should both print the analysis to the terminal and export a text file with the results.
 
-
-The winner of the election based on popular vote.
-
-
-Your analysis should look similar to the following:
-
-Election Results
--------------------------
-Total Votes: 369711
--------------------------
-Charles Casper Stockham: 23.049% (85213)
-Diana DeGette: 73.812% (272892)
-Raymon Anthony Doane: 3.139% (11606)
--------------------------
-Winner: Diana DeGette
--------------------------
-
-
-In addition, your final script should both print the analysis to the terminal and export a text file with the results.
-
-# First we'll import the os module
-# This will allow us to create file paths across operating systems
+# First import os module
+# to allow us to create file paths across operating systems
 import os
 
 # Module for reading CSV files
 import csv
 
-# here's my election data - it's in a folder called resources in that lives at the same level as main.py
-election_data_csv = /Users/miriam/git/Python-Challenge/PyPoll/Resources(__file__)), 'resources', 'election_data.csv')
+# here's the election data - it's in a folder called resources in that lives at the same level as main.py
+csvpath = "./resources/election_data.csv"
 
 totalVotes = 0 # total rows (not including the header is the total of votes)
 
@@ -52,7 +45,7 @@ totalVotes = 0 # total rows (not including the header is the total of votes)
 votesPerCandidate = {}
 
 # open up election_data
-with open(election_data_csv, newline='') as csvfile:
+with open(csvpath, newline='') as csvfile:
 
     # CSV reader specifies delimiter and variable that holds contents
     csvreader = csv.reader(csvfile, delimiter=',')
@@ -90,7 +83,7 @@ print(f"Winner: {winner}")
 
 # now write this to an output file
 
-f = open("election_results.txt", "w")
+f = open("./Analysis/election_results.txt", "w")
 f.write("Election Results")
 f.write('\n')
 f.write("-------------------------")
